@@ -1,0 +1,250 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #111;
+    color: rgba(255, 255, 255, 0.92);
+    font-family: 'Geist Sans', Geist, sans-serif;
+}
+
+.page-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 24px;
+    background: rgba(17, 17, 17, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.back-link:hover {
+    color: #ff6b6b;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 650;
+}
+
+.source-note {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.source-note a,
+.info a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.page-body {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.15fr);
+    gap: 28px 32px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px 24px 48px;
+}
+
+.info {
+    line-height: 1.65;
+}
+
+.paper-title {
+    margin: 0 0 10px;
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.authors,
+.meta {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.info h3 {
+    margin: 28px 0 10px;
+    font-size: 16px;
+    font-weight: 650;
+    letter-spacing: 0.3px;
+}
+
+.info h3:first-of-type {
+    margin-top: 22px;
+}
+
+.info ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.info li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.release-link {
+    margin-top: 28px;
+}
+
+.media-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.video-card {
+    background: #000;
+    overflow: hidden;
+}
+
+.video-card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 56vh;
+    background: #000;
+}
+
+.video-caption {
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    background: #1a1a1a;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.gallery-item {
+    appearance: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: #1a1a1a;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #1a1a1a;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 48px 64px 32px;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox img {
+    max-width: min(92vw, 1100px);
+    max-height: 78vh;
+    object-fit: contain;
+    background: #111;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.lightbox-close:hover {
+    color: #ff6b6b;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 48px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.lightbox-nav.prev { left: 8px; }
+.lightbox-nav.next { right: 8px; }
+
+.lightbox-nav:hover {
+    color: #ff6b6b;
+}
+
+@media (max-width: 900px) {
+    .page-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px 16px 36px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-body {
+        padding: 16px 12px 36px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .lightbox {
+        padding: 56px 12px 24px;
+    }
+
+    .lightbox-nav {
+        font-size: 36px;
+    }
+}

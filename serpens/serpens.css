@@ -1,0 +1,139 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #111;
+    color: rgba(255, 255, 255, 0.92);
+    font-family: 'Geist Sans', Geist, sans-serif;
+}
+
+.page-header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 24px;
+    background: rgba(17, 17, 17, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.back-link:hover {
+    color: #ff6b6b;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 650;
+}
+
+.source-note {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.source-note a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.aladin-view {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    background: #000;
+}
+
+/* Aladin Lite: replace magenta accent with readable light UI */
+.aladin-container {
+    --aladin-color: #f2f2f2;
+    --hover-color: #ff8a8a;
+    --border-color: rgba(255, 255, 255, 0.45);
+    --text-color: #f2f2f2;
+    --bg-color: rgba(18, 18, 18, 0.96);
+}
+
+.aladin-container .aladin-input-select,
+.aladin-container .aladin-box,
+.aladin-container .aladin-context-menu,
+.aladin-container .aladin-context-sub-menu {
+    background-color: rgba(18, 18, 18, 0.96) !important;
+    color: #f2f2f2 !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.aladin-container .aladin-context-menu-item:hover,
+.aladin-container .aladin-btn:hover,
+.aladin-container .aladin-input-select:hover {
+    color: #ffffff !important;
+    border-color: #ff8a8a !important;
+}
+
+.aladin-container .aladin-box-title {
+    color: #ffffff;
+}
+
+.map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 28px;
+    padding: 12px 24px;
+    background: rgba(17, 17, 17, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.survey-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+}
+
+.survey-options label,
+.crossfade {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.crossfade input[type="range"] {
+    width: 120px;
+}
+
+.credit {
+    margin: 0;
+    padding: 10px 24px 14px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    background: rgba(17, 17, 17, 0.95);
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .page-header,
+    .map-controls,
+    .credit {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

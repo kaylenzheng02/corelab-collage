@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMM 1 Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
+    <link rel="stylesheet" href="smm1.css">
+    <script src="smm1.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <a class="back-link" href="../index.html">← Back</a>
+        <div class="header-text">
+            <h1>SMM 1 (FIRS1)</h1>
+            <p class="source-note">
+                From
+                <a href="https://www.aanda.org/articles/aa/full_html/2014/03/aa22799-13/aa22799-13.html" target="_blank" rel="noopener noreferrer">Dionatos et al. 2014, A&amp;A 563, A28</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <section class="info">
+            <h2 class="paper-title">Atomic jet from SMM1 (FIRS1) in Serpens uncovers protobinary companion</h2>
+            <p class="authors">O. Dionatos, J. K. Jørgensen, P. S. Teixeira, M. Güdel, E. Bergin</p>
+            <p class="meta">A&amp;A 563, A28 (2014) · DOI: 10.1051/0004-6361/201322799</p>
+
+            <h3>Overview</h3>
+            <p>
+                SMM1 (also called FIRS1) is the most prominent protostellar source in Serpens.
+                Spitzer observations reveal an atomic jet in [FeII] and [NeII], showing that
+                SMM1 is a protobinary: a deeply embedded Class 0 source
+                (SMM1-a) and a more evolved Class I/II companion (SMM1-b) about 1.5 to 1.8″ to the northwest.
+            </p>
+
+            <h3>Key findings</h3>
+            <ul>
+                <li>SMM1 is two young stars: SMM1-a and SMM1-b.</li>
+                <li>Each drives its own jet, and the two jets point in different directions.</li>
+                <li>The atomic jet likely comes from SMM1-b; the molecular gas is linked to SMM1-a.</li>
+                <li>Larger cloud outflows also split into two systems, matching the binary picture.</li>
+            </ul>
+
+            <h3>Methods</h3>
+            <p>
+                Surroundings of SMM1 were mapped with the Spitzer Infrared Spectrograph (IRS)
+                in slit-scan mode (SH and LH modules, ~10 to 37 μm). Molecular (H<sub>2</sub>) and
+                atomic ([FeII], [NeII], [SiII], [SI]) emission were compared with deconvolved
+                Spitzer IRAC/MIPS images and high-velocity CO J = 3-2 outflow maps.
+                Physical conditions were assessed with LTE, non-LTE, and shock models.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                The Spitzer atomic jet disentangles the complex outflow morphology around SMM1
+                into two precessing outflows. Morphological and physical properties show SMM1
+                is a protobinary: the companion to the embedded Class 0 protostar SMM1-a is a
+                more evolved Class I/II source (SMM1-b).
+            </p>
+        </section>
+
+        <main class="gallery" id="gallery">
+            <button type="button" class="gallery-item" data-full="images/fig1-emission-maps.png">
+                <img src="images/fig1-emission-maps.png" alt="Emission maps">
+            </button>
+            <button type="button" class="gallery-item" data-full="images/fig2-spectra.png">
+                <img src="images/fig2-spectra.png" alt="Spectra">
+            </button>
+            <button type="button" class="gallery-item" data-full="images/fig3-lh-lines.png">
+                <img src="images/fig3-lh-lines.png" alt="LH line maps">
+            </button>
+            <button type="button" class="gallery-item" data-full="images/fig4-hires-mips-irac.png">
+                <img src="images/fig4-hires-mips-irac.png" alt="HiRes MIPS and IRAC">
+            </button>
+            <button type="button" class="gallery-item" data-full="images/fig5-co-outflows.png">
+                <img src="images/fig5-co-outflows.png" alt="CO outflows">
+            </button>
+            <button type="button" class="gallery-item" data-full="images/fig6-excitation-diagram.png">
+                <img src="images/fig6-excitation-diagram.png" alt="Excitation diagram">
+            </button>
+            <button type="button" class="gallery-item" data-full="images/fig7-nonlte-diagnostic.png">
+                <img src="images/fig7-nonlte-diagnostic.png" alt="Non-LTE diagnostic">
+            </button>
+        </main>
+    </div>
+
+    <div id="lightbox" class="lightbox" hidden>
+        <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+        <button type="button" class="lightbox-nav prev" aria-label="Previous">‹</button>
+        <img id="lightbox-image" alt="">
+        <button type="button" class="lightbox-nav next" aria-label="Next">›</button>
+    </div>
+</body>
+</html>
